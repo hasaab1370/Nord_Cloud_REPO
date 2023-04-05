@@ -120,7 +120,7 @@ production stylesheet in assets/built/screen.css
 .has-cover .site-header-content {
     min-height: 560px;
     background-color: var(--ghost-accent-color);
-    color: #fff;
+    color: #1aff36;
 }
 
 .site-header-content.left-aligned {
