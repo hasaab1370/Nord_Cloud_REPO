@@ -14,7 +14,7 @@ Based on the business case and acceptance criteria, the solution requirements ar
 11.	The solution must enable the customer to delete all posts at once using a serverless function.
 Architecture Overview
 1	The proposed architecture consists of multiple components, which work together to create a highly available, scalable, and secure blogging platform.
-2	The Ghost Blog platform will be deployed using Docker, which will enable easy management and scaling of the platform. The platform will be deployed in multiple Availability Zones (AZs) to ensure high availability and disaster recovery.
+2	The Ghost Blog platform: will be deployed using EC2 Instance or Docker, which will enable easy management and scaling of the platform. The platform will be deployed in multiple Availability Zones (AZs) to ensure high availability and disaster recovery.
 3	The Ghost Blogging Platform will be deployed in an Auto Scaling Group (ASG) behind an Application Load Balancer (ALB) to provide scalability and load balancing. The ASG will be configured to launch instances in multiple AZs for high availability. 
 Elastic Load Balancer will distribute incoming traffic across multiple instances of Ghost Blog running in the Auto Scaling Groups (ASGs). The ASGs will be configured to automatically scale the number of instances based on the traffic load.
 4	The data for the platform will be stored in a managed database service provided by the cloud provider, which will also be replicated across multiple AZs for durability and resilience.
@@ -47,11 +47,11 @@ This is an AWS service that provides a way to create and manage a collection of 
 will be created to provide the ability to delete all posts at once. Access to the function will be secured and audited to prevent unauthorized access.
 12.	Security: AWS Identity and Access Management (IAM)
 Appropriate security measures will be implemented to ensure the security of the platform and data. Access to the platform will be secured using multi-factor authentication, SSL encryption, and network security groups. Data at rest and in transit will be encrypted using appropriate encryption methods.
-11	Cost Optimization
+Cost Optimization
 The solution will be optimized for cost by leveraging the use of on-demand and spot instances. The usage of resources will be monitored and optimized to ensure minimal waste and optimal performance.
-12	DevOps Teams
+13	DevOps Teams
 Five DevOps teams will be given access to multiple separated environments to support their development efforts. The environments will be created using AWS Infrastructure and will be automated for efficient and consistent deployment. The teams will be able to release new versions of the application multiple times per day, without requiring any downtime.
-13	AWS Systems Manager: 
+14	AWS Systems Manager: 
 This is an AWS service that provides a unified user interface for managing your resources across multiple AWS accounts and regions. We will use this to manage the EC2 instances.
 
 Deployment:
